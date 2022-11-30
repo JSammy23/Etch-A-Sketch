@@ -3,3 +3,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.grid-cont {
+    width: 900px;
+    height: 900px;
+    border: 2px solid lime;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#prompt {
+    margin: 50px 45% 50px;
+    padding: .75em;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #708090;
+    width: 150px;
+    height: 50px;
+    border: none;
+}
+
+.btn-normal {
+    box-shadow: -3px -3px 7px #f5f5f5, 3px 3px 7px #bbc3cc;
+}
+
+.btn-pressed {
+    box-shadow: -3px -3px 7px #f5f5f5 inset, 3px 3px 7px #bbc3cc inset;
+}
+
+.btn-normal:active {
+    box-shadow: -3px -3px 7px #f5f5f5 inset, 3px 3px 7px #bbc3cc inset;
+    font-size: 12px;
+    user-select: none;
+}
+  
