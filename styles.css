@@ -21,12 +21,6 @@
     
 }
 
-/*.grid-cont>div:nth-child(17n + 1) {
-    width: 100%;
-    border: 0;
-    height: 0;
-  }*/
-
 #prompt {
     margin: 50px 46% 50px;
     padding: .75em;

@@ -41,5 +41,17 @@ function createGrid(numberCells) {
     //onLoad();
 }
 
+function refreshGrid() {
+    let allCells = document.querySelectorAll('.cell').forEach(element => {
+        cell.style.backgroundColor = "white";
+    });
+    let promptCells = prompt("Enter amount of cells in grid: (Default 16x16)")
+    let numberCells = parseInt(promptCells);
+    const gridDiv = document.getElementById("grid-cont");
+    // Delete all divs from the main container
+    while (gridDiv.firstChild) gridDiv.removeChild( gridDiv.firstChild);
+    createGrid(numberCells);
+}
 
+adjustBtn.addEventListener('click', refreshGrid);
 
