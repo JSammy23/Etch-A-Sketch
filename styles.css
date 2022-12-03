@@ -17,8 +17,15 @@
 }
 
 .cell {
-    border: solid 1px black;
-    
+    /*border: solid 1px black;*/
+}
+
+.idle {
+    background-color: white;
+}
+
+.active {
+    background-color: lime;
 }
 
 #prompt {

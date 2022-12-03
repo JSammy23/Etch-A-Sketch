@@ -1,5 +1,5 @@
 // Global variables //
-const adjustBtn = document.getElementById('prompt')
+const adjustBtn = document.getElementById('prompt');
 
 
 
@@ -42,16 +42,28 @@ function createGrid(numberCells) {
 }
 
 function refreshGrid() {
-    let allCells = document.querySelectorAll('.cell').forEach(element => {
-        cell.style.backgroundColor = "white";
-    });
+    let allCells = document.querySelectorAll('.cell');
+    for (let i = 0; i < allCells.length; i++) {
+        allCells[i].style.backgroundColor = "white";
+    };
     let promptCells = prompt("Enter amount of cells in grid: (Default 16x16)")
     let numberCells = parseInt(promptCells);
     const gridDiv = document.getElementById("grid-cont");
     // Delete all divs from the main container
     while (gridDiv.firstChild) gridDiv.removeChild( gridDiv.firstChild);
     createGrid(numberCells);
+    listen();
 }
 
+// Event Listener
 adjustBtn.addEventListener('click', refreshGrid);
+
+function listen() {
+    gridCell = document.getElementsByClassName('cell');
+    for (let i = 0; i < gridCell.length; i++) {
+        gridCell[i].addEventListener('mouseover', () => {
+            gridCell[i].style.backgroundColor = "lime";
+        })
+    }
+}
 
