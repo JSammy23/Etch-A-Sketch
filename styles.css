@@ -28,8 +28,15 @@
     background-color: lime;
 }
 
-#prompt {
-    margin: 50px 46% 50px;
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    gap: 5rem;
+}
+
+.soft-btn {
     padding: .75em;
     border-radius: 50px;
     font-size: 14px;
@@ -42,10 +49,6 @@
 
 .btn-normal {
     box-shadow: -3px -3px 7px #f5f5f5, 3px 3px 7px #bbc3cc;
-}
-
-.btn-pressed {
-    box-shadow: -3px -3px 7px #f5f5f5 inset, 3px 3px 7px #bbc3cc inset;
 }
 
 .btn-normal:active {
