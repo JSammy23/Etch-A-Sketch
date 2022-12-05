@@ -1,5 +1,7 @@
 // Global variables //
 const adjustBtn = document.getElementById('prompt');
+const colorBtn = document.getElementById('color');
+let color = 'lime';
 
 
 
@@ -38,7 +40,7 @@ function createGrid(numberCells) {
             divArray[i].appendChild(newDiv);
         }
     }
-    //onLoad();
+    
 }
 
 function refreshGrid() {
@@ -57,13 +59,19 @@ function refreshGrid() {
 
 // Event Listener
 adjustBtn.addEventListener('click', refreshGrid);
+colorBtn.addEventListener('click', changeColor);
 
+// Fn to listen for mouse entering divsto chnage background color
 function listen() {
     gridCell = document.getElementsByClassName('cell');
     for (let i = 0; i < gridCell.length; i++) {
         gridCell[i].addEventListener('mouseover', () => {
-            gridCell[i].style.backgroundColor = "lime";
+            gridCell[i].style.backgroundColor = color;
         })
     }
 }
 
+// FN to change global color var
+function changeColor() {
+    color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+}
