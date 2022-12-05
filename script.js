@@ -50,6 +50,10 @@ function refreshGrid() {
     };
     let promptCells = prompt("Enter amount of cells in grid: (Default 16x16)")
     let numberCells = parseInt(promptCells);
+    if (numberCells > 100) {
+        window.alert("Maximun of 100 cells");
+        return;
+    }
     const gridDiv = document.getElementById("grid-cont");
     // Delete all divs from the main container
     while (gridDiv.firstChild) gridDiv.removeChild( gridDiv.firstChild);
